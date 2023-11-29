@@ -18,7 +18,8 @@ const login=async(req,res)=>{
         })
         if(users){
              console.log(users);
-             return res.send(users)
+             const getAll=await userLoginss.findAll();
+             return res.send(getAll)
         }
         else{
              console.log("Failed to connect logined")
